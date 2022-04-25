@@ -1,8 +1,12 @@
-//
-//  CovidDatos.swift
-//  ListaCovid
-//
-//  Created by Mac12 on 25/04/22.
-//
 
 import Foundation
+
+struct CovidDatos: Decodable {
+    let country: String?
+    let active: Double?
+    let countInfo: CountryInfo?
+}
+
+struct CountryInfo:Decodable {
+    let flag: String?
+}
