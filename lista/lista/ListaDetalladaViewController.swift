@@ -13,8 +13,11 @@ class ListaDetalladaViewController: UIViewController {
         print(recibirCalificacion!)
         // Do any additional setup after loading the view.
         if recibirCalificacion! < 70{
+            imagen.image = UIImage(named: "reprob")
             //cambiar imagen, mostrar calificacion y validar si es aprobatoria o reprobatoria
             
+        }else{
+            imagen.image = UIImage(named: "aprob")
         }
     }
 }

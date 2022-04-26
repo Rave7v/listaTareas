@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //crear un objeto del tipo uitableview cell
         let celda = tablaItems.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
         celda.textLabel?.text = alumnos[indexPath.row].nombre
-        celda.detailTextLabel?.text = "14 marzo 2022"
+        celda.detailTextLabel?.text = "\(alumnos[indexPath.row].calificacion!)"
         return celda
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

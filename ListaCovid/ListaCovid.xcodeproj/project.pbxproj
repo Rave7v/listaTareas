@@ -14,7 +14,6 @@
 		48E183AD2816E34900448272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E183AC2816E34900448272 /* Assets.xcassets */; };
 		48E183B02816E34900448272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E183AE2816E34900448272 /* LaunchScreen.storyboard */; };
 		48E183B92816E69600448272 /* CovidDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E183B82816E69600448272 /* CovidDatos.swift */; };
-		48E183BC2816E7EB00448272 /* CovidModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E183BB2816E7EB00448272 /* CovidModelo.swift */; };
 		48E183BF2816EA5A00448272 /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E183BE2816EA5A00448272 /* CovidManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		48E183AF2816E34900448272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48E183B12816E34900448272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48E183B82816E69600448272 /* CovidDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDatos.swift; sourceTree = "<group>"; };
-		48E183BB2816E7EB00448272 /* CovidModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidModelo.swift; sourceTree = "<group>"; };
 		48E183BE2816EA5A00448272 /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +68,6 @@
 				48E183AE2816E34900448272 /* LaunchScreen.storyboard */,
 				48E183B12816E34900448272 /* Info.plist */,
 				48E183B82816E69600448272 /* CovidDatos.swift */,
-				48E183BB2816E7EB00448272 /* CovidModelo.swift */,
 				48E183BE2816EA5A00448272 /* CovidManager.swift */,
 			);
 			path = ListaCovid;
@@ -146,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48E183BC2816E7EB00448272 /* CovidModelo.swift in Sources */,
 				48E183A82816E34000448272 /* ViewController.swift in Sources */,
 				48E183A42816E34000448272 /* AppDelegate.swift in Sources */,
 				48E183BF2816EA5A00448272 /* CovidManager.swift in Sources */,

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  clima
+//  Clima
 //
-//  Created by Mac12 on 17/03/22.
+//  Created by mac16 on 17/03/22.
 //
 
 import UIKit
