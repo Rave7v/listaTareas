@@ -15,6 +15,7 @@
 		48E183B02816E34900448272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E183AE2816E34900448272 /* LaunchScreen.storyboard */; };
 		48E183B92816E69600448272 /* CovidDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E183B82816E69600448272 /* CovidDatos.swift */; };
 		48E183BF2816EA5A00448272 /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E183BE2816EA5A00448272 /* CovidManager.swift */; };
+		48F40AFA281ADC1D00141051 /* segundaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F40AF9281ADC1D00141051 /* segundaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		48E183B12816E34900448272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48E183B82816E69600448272 /* CovidDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDatos.swift; sourceTree = "<group>"; };
 		48E183BE2816EA5A00448272 /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
+		48F40AF9281ADC1D00141051 /* segundaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segundaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				48E183B12816E34900448272 /* Info.plist */,
 				48E183B82816E69600448272 /* CovidDatos.swift */,
 				48E183BE2816EA5A00448272 /* CovidManager.swift */,
+				48F40AF9281ADC1D00141051 /* segundaViewController.swift */,
 			);
 			path = ListaCovid;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				48E183A42816E34000448272 /* AppDelegate.swift in Sources */,
 				48E183BF2816EA5A00448272 /* CovidManager.swift in Sources */,
 				48E183A62816E34000448272 /* SceneDelegate.swift in Sources */,
+				48F40AFA281ADC1D00141051 /* segundaViewController.swift in Sources */,
 				48E183B92816E69600448272 /* CovidDatos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

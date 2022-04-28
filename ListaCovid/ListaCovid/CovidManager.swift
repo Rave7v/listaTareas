@@ -19,6 +19,7 @@ struct CovidManager {
                 if let datosSeguros = datos{
                     print(datosSeguros)
                     if let listaPaises = self.parsearJSON(datosCovid: datosSeguros){
+                        //no me importa si hay delgado o quien sea
                         delegado?.actualizar(paises: listaPaises)
                     }
                 }

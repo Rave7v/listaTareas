@@ -58,11 +58,114 @@
                     </view>
                     <connections>
                         <outlet property="tablaPaises" destination="eJI-ct-FtE" id="Oep-lE-UAp"/>
+                        <segue destination="JmJ-Z2-RNi" kind="show" identifier="info" id="QEi-af-PUE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141" y="104"/>
+        </scene>
+        <!--Segunda View Controller-->
+        <scene sceneID="Jcj-p0-YMQ">
+            <objects>
+                <viewController id="JmJ-Z2-RNi" customClass="segundaViewController" customModule="ListaCovid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="xTG-b4-eiL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KC5-j6-PPx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axT-kt-Rmv">
+                                        <rect key="frame" x="87" y="0.0" width="240" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="447-LW-eyW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="svb-9H-DsU">
+                                        <rect key="frame" x="10" y="230" width="394" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mexico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSg-LR-XVC">
+                                                <rect key="frame" x="155" y="0.0" width="84.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casos Activos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRF-Od-Vt5">
+                                                <rect key="frame" x="143.5" y="25" width="107.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="casos totales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-cp-ulf">
+                                                <rect key="frame" x="147" y="50" width="100.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="casos de hoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ7-di-VB8">
+                                                <rect key="frame" x="147" y="75" width="100.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recuperados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAe-o0-hIS">
+                                                <rect key="frame" x="149" y="100" width="96" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total recuperados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntF-4z-vkL">
+                                                <rect key="frame" x="130" y="125" width="134.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="criticos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avo-Gg-zHb">
+                                                <rect key="frame" x="169" y="150" width="56" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muertos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2H-te-t82">
+                                                <rect key="frame" x="165.5" y="175" width="63.5" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="svb-9H-DsU" firstAttribute="leading" secondItem="KC5-j6-PPx" secondAttribute="leading" constant="10" id="BcU-MP-EWc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lvd-7i-4aU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KC5-j6-PPx" secondAttribute="bottom" constant="285" id="4JB-G6-w58"/>
+                            <constraint firstItem="KC5-j6-PPx" firstAttribute="leading" secondItem="xTG-b4-eiL" secondAttribute="leading" id="DU5-Ir-QKl"/>
+                            <constraint firstItem="lvd-7i-4aU" firstAttribute="trailing" secondItem="KC5-j6-PPx" secondAttribute="trailing" id="IfX-Jf-k2F"/>
+                            <constraint firstItem="KC5-j6-PPx" firstAttribute="top" secondItem="lvd-7i-4aU" secondAttribute="top" id="iva-ot-zKd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7FX-Gb-JU0"/>
+                    <connections>
+                        <outlet property="Bandera" destination="axT-kt-Rmv" id="ZIT-gk-teW"/>
+                        <outlet property="Trecuperados" destination="ntF-4z-vkL" id="9mP-Va-tea"/>
+                        <outlet property="activos" destination="fRF-Od-Vt5" id="dzS-rF-ESA"/>
+                        <outlet property="casos" destination="JhI-cp-ulf" id="K34-Dq-DLw"/>
+                        <outlet property="casosHoy" destination="tJ7-di-VB8" id="gnG-Rg-uSO"/>
+                        <outlet property="criticos" destination="avo-Gg-zHb" id="qhi-au-XwX"/>
+                        <outlet property="lugar" destination="qSg-LR-XVC" id="aC3-x3-X0X"/>
+                        <outlet property="muertos" destination="P2H-te-t82" id="EbA-BB-PCx"/>
+                        <outlet property="recuperados" destination="xAe-o0-hIS" id="bZz-Rd-zRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayZ-30-Wcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857.97101449275374" y="103.79464285714285"/>
         </scene>
     </scenes>
     <resources>
