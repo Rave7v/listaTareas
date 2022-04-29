@@ -17,12 +17,28 @@ class segundaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lugar.text = recibirObjPais?.country
-        activos.text = "Casos activos: \(recibirObjPais?.active)"
-        casos.text = "Casos Totales: \(recibirObjPais?.cases)"
-        Trecuperados.text = "Total de recuperados: \(recibirObjPais?.recovered)"
-        muertos.text = "Muertos: \(recibirObjPais?.deaths)"
-        criticos.text = "Criticos: \(recibirObjPais?.critical)"
-        recuperados.text = "Recuperados hoy: \(recibirObjPais?.todayRecovered)"
-        casosHoy.text = "Casos hoy: \(recibirObjPais?.todayCases)"
+        activos.text = "Casos activos: \(recibirObjPais?.active ?? 0)"
+        casos.text = "Casos Totales: \(recibirObjPais?.cases ?? 0)"
+        Trecuperados.text = "Total de recuperados: \(recibirObjPais?.recovered ?? 0)"
+        muertos.text = "Muertos: \(recibirObjPais?.deaths ?? 0)"
+        criticos.text = "Criticos: \(recibirObjPais?.critical ?? 0)"
+        recuperados.text = "Recuperados hoy: \(recibirObjPais?.todayRecovered ?? 0)"
+        casosHoy.text = "Casos hoy: \(recibirObjPais?.todayCases ?? 0)"
+        
+        if let urlString = recibirObjPais?.countryInfo?.flag{
+            //print(urlString)
+            if let imagenURL = URL(string: urlString){
+                //print(imagenURL)
+                DispatchQueue.global().async {
+                    guard let imagenData = try? Data(contentsOf: imagenURL)else{ return }
+                    //crear un obj tipo image
+                    //print("imagen data: \(imagenData)")
+                    let image = UIImage(data: imagenData)
+                    DispatchQueue.main.async {
+                        self.Bandera.image = image
+                    }
+                }
+            }
+        }
     }
 }

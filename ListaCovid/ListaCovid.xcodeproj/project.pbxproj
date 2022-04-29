@@ -15,6 +15,8 @@
 		48E183B02816E34900448272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E183AE2816E34900448272 /* LaunchScreen.storyboard */; };
 		48E183B92816E69600448272 /* CovidDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E183B82816E69600448272 /* CovidDatos.swift */; };
 		48E183BF2816EA5A00448272 /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E183BE2816EA5A00448272 /* CovidManager.swift */; };
+		48E5DD54281C2AC50086C271 /* CeldaPaisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5DD52281C2AC50086C271 /* CeldaPaisTableViewCell.swift */; };
+		48E5DD55281C2AC60086C271 /* CeldaPaisTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E5DD53281C2AC50086C271 /* CeldaPaisTableViewCell.xib */; };
 		48F40AFA281ADC1D00141051 /* segundaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F40AF9281ADC1D00141051 /* segundaViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		48E183B12816E34900448272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48E183B82816E69600448272 /* CovidDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDatos.swift; sourceTree = "<group>"; };
 		48E183BE2816EA5A00448272 /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
+		48E5DD52281C2AC50086C271 /* CeldaPaisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPaisTableViewCell.swift; sourceTree = "<group>"; };
+		48E5DD53281C2AC50086C271 /* CeldaPaisTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CeldaPaisTableViewCell.xib; sourceTree = "<group>"; };
 		48F40AF9281ADC1D00141051 /* segundaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segundaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,8 @@
 				48E183B82816E69600448272 /* CovidDatos.swift */,
 				48E183BE2816EA5A00448272 /* CovidManager.swift */,
 				48F40AF9281ADC1D00141051 /* segundaViewController.swift */,
+				48E5DD52281C2AC50086C271 /* CeldaPaisTableViewCell.swift */,
+				48E5DD53281C2AC50086C271 /* CeldaPaisTableViewCell.xib */,
 			);
 			path = ListaCovid;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E5DD55281C2AC60086C271 /* CeldaPaisTableViewCell.xib in Resources */,
 				48E183B02816E34900448272 /* LaunchScreen.storyboard in Resources */,
 				48E183AD2816E34900448272 /* Assets.xcassets in Resources */,
 				48E183AB2816E34000448272 /* Main.storyboard in Resources */,
@@ -151,6 +158,7 @@
 				48E183BF2816EA5A00448272 /* CovidManager.swift in Sources */,
 				48E183A62816E34000448272 /* SceneDelegate.swift in Sources */,
 				48F40AFA281ADC1D00141051 /* segundaViewController.swift in Sources */,
+				48E5DD54281C2AC50086C271 /* CeldaPaisTableViewCell.swift in Sources */,
 				48E183B92816E69600448272 /* CovidDatos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
