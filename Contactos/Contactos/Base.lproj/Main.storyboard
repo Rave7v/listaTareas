@@ -74,49 +74,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uJb-T1-Azt">
-                                <rect key="frame" x="10" y="98" width="394" height="724"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uJb-T1-Azt">
+                                <rect key="frame" x="10" y="98" width="394" height="620"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kQV-8e-REb">
-                                        <rect key="frame" x="0.0" y="0.5" width="394" height="119"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="MgW-VG-QtD"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.5" width="394" height="19"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jiB-r3-DL3">
-                                        <rect key="frame" x="0.0" y="150" width="394" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="rBz-Ay-dMm"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="40" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txt-0H-vKq">
-                                        <rect key="frame" x="0.0" y="220" width="394" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Cwb-YH-fic"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="94" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gi-i7-pLI">
-                                        <rect key="frame" x="0.0" y="290" width="394" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="bKk-oS-e30"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="148" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ug-t0-tJN">
-                                        <rect key="frame" x="0.0" y="360" width="394" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="UsQ-Sq-NYl"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="202" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mWA-hP-PEf">
-                                        <rect key="frame" x="0.0" y="430" width="394" height="35"/>
+                                        <rect key="frame" x="0.0" y="256" width="394" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGc-Nr-0QA">
                                                 <rect key="frame" x="0.0" y="0.0" width="182" height="35"/>
@@ -155,12 +140,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="iel-TD-5d7"/>
-                                        </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgH-ha-2vR">
-                                        <rect key="frame" x="0.0" y="495" width="394" height="229"/>
+                                        <rect key="frame" x="0.0" y="311" width="394" height="309"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -169,10 +151,10 @@
                         <viewLayoutGuide key="safeArea" id="hNS-xt-sK2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uJb-T1-Azt" firstAttribute="top" secondItem="hNS-xt-sK2" secondAttribute="top" constant="10" id="AdK-JV-FEE"/>
                             <constraint firstItem="uJb-T1-Azt" firstAttribute="leading" secondItem="hNS-xt-sK2" secondAttribute="leading" constant="10" id="WqV-0U-bhX"/>
-                            <constraint firstItem="hNS-xt-sK2" firstAttribute="bottom" secondItem="uJb-T1-Azt" secondAttribute="bottom" constant="40" id="Zhm-YF-GEg"/>
                             <constraint firstItem="hNS-xt-sK2" firstAttribute="trailing" secondItem="uJb-T1-Azt" secondAttribute="trailing" constant="10" id="cON-bS-qnN"/>
-                            <constraint firstItem="uJb-T1-Azt" firstAttribute="top" secondItem="hNS-xt-sK2" secondAttribute="top" constant="10" id="iKB-VS-PC9"/>
+                            <constraint firstItem="hNS-xt-sK2" firstAttribute="bottom" secondItem="uJb-T1-Azt" secondAttribute="bottom" constant="144" id="tZf-A8-oGa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Editar" id="h0S-6P-kD0"/>
