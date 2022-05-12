@@ -96,10 +96,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-wd-btj">
-                                        <rect key="frame" x="0.0" y="286" width="394" height="123"/>
+                                        <rect key="frame" x="0.0" y="285.5" width="394" height="123"/>
                                     </datePicker>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note.text.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-bZ-cLL">
-                                        <rect key="frame" x="0.0" y="430" width="395.5" height="121.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="todo" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-bZ-cLL">
+                                        <rect key="frame" x="0.0" y="428.5" width="394" height="122.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7d7-wa-ZsB">
                                         <rect key="frame" x="0.0" y="571" width="394" height="123"/>
@@ -118,8 +118,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nueva" id="Xbp-vA-qnO">
-                        <barButtonItem key="rightBarButtonItem" title="Guardar" image="tray.and.arrow.down.fill" catalog="system" id="NOV-8t-SJt"/>
+                        <barButtonItem key="rightBarButtonItem" title="Guardar" image="tray.and.arrow.down.fill" catalog="system" id="NOV-8t-SJt">
+                            <connections>
+                                <action selector="GuardarTareBtn:" destination="aME-Oj-Y45" id="raq-OO-jbW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fechaTareaPicker" destination="eEg-wd-btj" id="VEs-ip-rBh"/>
+                        <outlet property="textoTarea" destination="2r4-h8-tYH" id="tiK-To-e25"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwf-11-Dip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,6 +172,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="guardarBtn:" destination="BQS-SL-2zq" eventType="touchUpInside" id="you-5J-UPk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN2-IT-5R4">
                                         <rect key="frame" x="0.0" y="513" width="394" height="82.5"/>
@@ -194,10 +205,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Editar" id="SyZ-L2-cpg"/>
+                    <connections>
+                        <outlet property="fechaElemento" destination="5Bw-yx-dHs" id="eXw-8f-l1g"/>
+                        <outlet property="tituloElemento" destination="RXh-Iu-FaJ" id="BKE-Bo-Vjb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dd-OM-eEA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="626"/>
+            <point key="canvasLocation" x="1809" y="624"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ylm-tV-obt">
@@ -221,6 +236,7 @@
     <resources>
         <image name="note.text.badge.plus" catalog="system" width="128" height="108"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="todo" width="1034" height="633"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

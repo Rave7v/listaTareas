@@ -1,29 +1,29 @@
-//
-//  EditarTareaViewController.swift
-//  ListaTareas
-//
-//  Created by Mac12 on 11/05/22.
-//
 
 import UIKit
 
 class EditarTareaViewController: UIViewController {
 
+    var recibirTarea: Tarea?
+    @IBOutlet weak var tituloElemento: UITextField!
+    @IBOutlet weak var fechaElemento: UIDatePicker!
+
+    let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tituloElemento.text = recibirTarea?.titulo ?? ""
+        fechaElemento.date = recibirTarea?.fecha ?? Date()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func guardarBtn(_ sender: UIButton) {
+        recibirTarea?.titulo = tituloElemento.text ?? ""
+        recibirTarea?.fecha = fechaElemento.date
+        
+        do {
+            try contexto.save()
+        } catch{
+            print(error.localizedDescription)
+        }
+        navigationController?.popToRootViewController(animated: true)
     }
-    */
-
 }
