@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tareas-->
+        <!--Lista de pendientes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreD" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qvl-3S-6MV" secondAttribute="bottom" id="x7V-zZ-9f2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tareas" id="aZc-4v-2Se">
+                    <navigationItem key="navigationItem" title="Lista de pendientes" id="aZc-4v-2Se">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ztF-Qe-y03">
                             <connections>
                                 <action selector="agregarTarea:" destination="BYZ-38-t0r" id="dKN-Tg-ca2"/>

@@ -34,6 +34,7 @@ class EditarContactoViewController: UIViewController {
     @IBAction func guardarBtn(_ sender: UIButton) {
         print("guardo")
     }
+    
     @IBAction func cancelarBtn(_ sender: UIButton) {
         print("cancelo")
     }

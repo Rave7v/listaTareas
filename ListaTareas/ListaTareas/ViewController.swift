@@ -62,7 +62,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let celda = tablaTareas.dequeueReusableCell(withIdentifier: "celda" ,for: indexPath)
         celda.textLabel?.text = listaTareas[indexPath.row].titulo
         celda.detailTextLabel?.text = "\(listaTareas[indexPath.row].fecha ?? Date() )"
+        let imagenes = UIImage(data: listaTareas[indexPath.row].imagen!)
+        celda.imageView?.image = imagenes
         return celda
+        
+    }
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let accionEliminar = UIContextualAction(style: .normal, title: "borrar") { _, _, _ in
+            self.contexto.delete(self.listaTareas[indexPath.row])
+            self.listaTareas.remove(at: indexPath.row)
+            
+            self.guardar()
+        }
+        accionEliminar.image = UIImage(systemName: "trash")
+        accionEliminar.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [accionEliminar])
+    }
+    func guardar(){
+        do{
+            try contexto.save()
+        }catch{
+            print("error al guardar: \(error.localizedDescription)")
+        }
+        self.tablaTareas.reloadData()
     }
     
 }

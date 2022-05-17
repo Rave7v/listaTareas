@@ -126,6 +126,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="fechaTareaPicker" destination="eEg-wd-btj" id="VEs-ip-rBh"/>
+                        <outlet property="imagen" destination="VFb-bZ-cLL" id="QBW-3v-Ifd"/>
                         <outlet property="textoTarea" destination="2r4-h8-tYH" id="tiK-To-e25"/>
                     </connections>
                 </viewController>
@@ -207,6 +208,7 @@
                     <navigationItem key="navigationItem" title="Editar" id="SyZ-L2-cpg"/>
                     <connections>
                         <outlet property="fechaElemento" destination="5Bw-yx-dHs" id="eXw-8f-l1g"/>
+                        <outlet property="imagen" destination="0fD-YR-qmq" id="PHC-0k-bOH"/>
                         <outlet property="tituloElemento" destination="RXh-Iu-FaJ" id="BKE-Bo-Vjb"/>
                     </connections>
                 </viewController>
