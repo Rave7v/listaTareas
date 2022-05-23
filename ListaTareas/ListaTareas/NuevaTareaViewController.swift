@@ -45,8 +45,6 @@ class NuevaTareaViewController: UIViewController,UITextFieldDelegate{
             nuevoElemento.fecha = fechaTarea
             nuevoElemento.imagen = imagen.image?.pngData()
             //
-            
-            
             do{
                 try contexto.save()
                 print("Se guardo correctamente")
@@ -61,7 +59,9 @@ class NuevaTareaViewController: UIViewController,UITextFieldDelegate{
             textoTarea.placeholder = "Necesita escribir una tarea para guardarla"
         }
     }//func guardar
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 extension NuevaTareaViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

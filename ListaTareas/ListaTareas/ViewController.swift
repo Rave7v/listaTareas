@@ -61,7 +61,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tablaTareas.dequeueReusableCell(withIdentifier: "celda" ,for: indexPath)
         celda.textLabel?.text = listaTareas[indexPath.row].titulo
-        celda.detailTextLabel?.text = "\(listaTareas[indexPath.row].fecha ?? Date() )"
+        
+        /*mostrar fecha
+        let time = listaTareas[indexPath.row].fecha ?? Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        let fullDate = dateFormatter.string(from: time)
+        dateFormatter.dateFormat = "hh:mm"
+        let time2 = dateFormatter.date(from: fullDate)!*/
+        let formatter1 = DateFormatter()
+        formatter1.dateStyle = .medium
+        celda.detailTextLabel?.text = formatter1.string(from: listaTareas[indexPath.row].fecha!)
+        //mostrar imagen
         let imagenes = UIImage(data: listaTareas[indexPath.row].imagen!)
         celda.imageView?.image = imagenes
         return celda

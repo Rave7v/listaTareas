@@ -21,15 +21,10 @@ class EditarTareaViewController: UIViewController {
         
         tituloElemento.text = recibirTarea?.titulo ?? ""
         fechaElemento.date = recibirTarea?.fecha ?? Date()
+        //mostrar imagen
+        let imagencd = UIImage(data: (recibirTarea?.imagen!)!)
+        imagen.image = imagencd
     }
-    
-    
-    
-    //////////falta guardar y falta mostrar
-    
-    
-    
-    
     
     @objc func clickImage(gesture: UITapGestureRecognizer){
         //crear view controller temporal
@@ -44,12 +39,19 @@ class EditarTareaViewController: UIViewController {
         
         recibirTarea?.titulo = tituloElemento.text ?? ""
         recibirTarea?.fecha = fechaElemento.date
+        recibirTarea?.imagen = imagen.image?.pngData()
         
         do {
             try contexto.save()
         } catch{
             print(error.localizedDescription)
         }
+        navigationController?.popToRootViewController(animated: true)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    @IBAction func cancelar(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
 }
