@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  MenuFirebase
-//
-//  Created by Mac12 on 23/05/22.
-//
-
+import FirebaseCore
 import UIKit
 import CoreData
 
@@ -14,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
