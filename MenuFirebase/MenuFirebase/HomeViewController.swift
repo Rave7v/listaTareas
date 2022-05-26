@@ -1,29 +1,40 @@
-//
-//  HomeViewController.swift
-//  MenuFirebase
-//
-//  Created by Mac12 on 24/05/22.
-//
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var nomUsuario: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //ocultar boton de retroceder
+        navigationItem.hidesBackButton = true
+        
+        //sesion
+        if let email = Auth.auth().currentUser?.email {
+            let defaults = UserDefaults.standard
+            defaults.set(email, forKey: "email")
+            title = email
+            print("Se guardó la sesion")
+            defaults.synchronize()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cerrarSesionBtn(_ sender: UIButton) {
+        
+        //borar sesion
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "email")
+        print("Se eliminó la sesion")
+        defaults.synchronize()
+        
+        do{
+            try Auth.auth().signOut()
+            print("Se ha cerrado sesion")
+            //navegar a la pantalla de inicio
+            navigationController?.popToRootViewController(animated: true)
+        }catch{
+            print("Error al iniciar sesion\(error.localizedDescription)")
+        }
     }
-    */
-
 }

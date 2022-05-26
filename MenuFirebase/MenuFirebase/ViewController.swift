@@ -15,7 +15,17 @@ class ViewController: UIViewController {
         mensajeBienvenida.text = "Bienvenidos al Criptomundo "
         //color al finalizar
         mensajeBienvenida.onTypingAnimationFinished = {
-            self.mensajeBienvenida.textColor = .yellow
+        self.mensajeBienvenida.textColor = .yellow
+            
+        //guardar sesion
+        let defaults = UserDefaults.standard
+        
+        if let email = defaults.value(forKey: "email") as? String{
+                //utilizar segue para ir al HOME VC
+                print(email)
+                print("Se encontro la sesion guardada y se navega a HOME VC")
+                self.performSegue(withIdentifier: "loginMenu", sender: self)
+            }
         }
     }
 
