@@ -11,6 +11,8 @@
 		480D8E2C283D211600FCFE6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D8E2B283D211600FCFE6D /* HomeViewController.swift */; };
 		480D8E2F283D212A00FCFE6D /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */; };
 		48E34763283FCA9F0012419C /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E34762283FCA9F0012419C /* MapaViewController.swift */; };
+		48E5730F28411CFE00D9E57F /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5730E28411CFE00D9E57F /* PrincipalViewController.swift */; };
+		48E5731228411D7600D9E57F /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5731128411D7600D9E57F /* DetalleViewController.swift */; };
 		48E5A7FF283BCD2600251601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5A7FE283BCD2600251601 /* AppDelegate.swift */; };
 		48E5A801283BCD2600251601 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5A800283BCD2600251601 /* SceneDelegate.swift */; };
 		48E5A803283BCD2600251601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5A802283BCD2600251601 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		480D8E2B283D211600FCFE6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		48E34762283FCA9F0012419C /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		48E5730E28411CFE00D9E57F /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
+		48E5731128411D7600D9E57F /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
 		48E5A7FB283BCD2600251601 /* MenuFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E5A7FE283BCD2600251601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E5A800283BCD2600251601 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				480D8E2B283D211600FCFE6D /* HomeViewController.swift */,
 				480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */,
 				48E34762283FCA9F0012419C /* MapaViewController.swift */,
+				48E5730E28411CFE00D9E57F /* PrincipalViewController.swift */,
+				48E5731128411D7600D9E57F /* DetalleViewController.swift */,
 			);
 			path = MenuFirebase;
 			sourceTree = "<group>";
@@ -222,7 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				480D8E2C283D211600FCFE6D /* HomeViewController.swift in Sources */,
+				48E5730F28411CFE00D9E57F /* PrincipalViewController.swift in Sources */,
 				480D8E2F283D212A00FCFE6D /* RegistroViewController.swift in Sources */,
+				48E5731228411D7600D9E57F /* DetalleViewController.swift in Sources */,
 				48E5A803283BCD2600251601 /* ViewController.swift in Sources */,
 				48E5A7FF283BCD2600251601 /* AppDelegate.swift in Sources */,
 				48E34763283FCA9F0012419C /* MapaViewController.swift in Sources */,

@@ -10,12 +10,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //velocidad
-        mensajeBienvenida.charInterval = 0.01
+        mensajeBienvenida.charInterval = 0.09
         //mensaje
         mensajeBienvenida.text = "Bienvenidos al Criptomundo "
         //color al finalizar
         mensajeBienvenida.onTypingAnimationFinished = {
-        self.mensajeBienvenida.textColor = .yellow
+        self.mensajeBienvenida.textColor = .black
             
         //guardar sesion
         let defaults = UserDefaults.standard
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         if let email = correUsuario.text, let password = contraseñaUsuario.text{
             Auth.auth().signIn(withEmail: email, password: password){ [weak self] authResult, error in
                 if let e = error{
-                    print("Eroor al iniciar sesion \(e.localizedDescription)")
+                    print("Error al iniciar sesion \(e.localizedDescription)")
                 }else{
                     print("Inicio exitoso")
                     self!.performSegue(withIdentifier: "loginMenu", sender: self)
