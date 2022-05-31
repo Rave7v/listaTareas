@@ -10,6 +10,10 @@
 		4800F24D283E796C00A1D741 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4800F24C283E796C00A1D741 /* GoogleService-Info.plist */; };
 		480D8E2C283D211600FCFE6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D8E2B283D211600FCFE6D /* HomeViewController.swift */; };
 		480D8E2F283D212A00FCFE6D /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */; };
+		48E1F04028450BE800FC57CC /* CriptoDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1F03F28450BE800FC57CC /* CriptoDatos.swift */; };
+		48E1F04328450C3300FC57CC /* CriptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1F04228450C3300FC57CC /* CriptoManager.swift */; };
+		48E1F0472845139E00FC57CC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1F0452845139E00FC57CC /* TableViewCell.swift */; };
+		48E1F0482845139F00FC57CC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E1F0462845139E00FC57CC /* TableViewCell.xib */; };
 		48E34763283FCA9F0012419C /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E34762283FCA9F0012419C /* MapaViewController.swift */; };
 		48E5730F28411CFE00D9E57F /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5730E28411CFE00D9E57F /* PrincipalViewController.swift */; };
 		48E5731228411D7600D9E57F /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5731128411D7600D9E57F /* DetalleViewController.swift */; };
@@ -27,6 +31,10 @@
 		4800F24C283E796C00A1D741 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		480D8E2B283D211600FCFE6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		48E1F03F28450BE800FC57CC /* CriptoDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoDatos.swift; sourceTree = "<group>"; };
+		48E1F04228450C3300FC57CC /* CriptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoManager.swift; sourceTree = "<group>"; };
+		48E1F0452845139E00FC57CC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		48E1F0462845139E00FC57CC /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		48E34762283FCA9F0012419C /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		48E5730E28411CFE00D9E57F /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
 		48E5731128411D7600D9E57F /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +99,10 @@
 				48E34762283FCA9F0012419C /* MapaViewController.swift */,
 				48E5730E28411CFE00D9E57F /* PrincipalViewController.swift */,
 				48E5731128411D7600D9E57F /* DetalleViewController.swift */,
+				48E1F03F28450BE800FC57CC /* CriptoDatos.swift */,
+				48E1F04228450C3300FC57CC /* CriptoManager.swift */,
+				48E1F0452845139E00FC57CC /* TableViewCell.swift */,
+				48E1F0462845139E00FC57CC /* TableViewCell.xib */,
 			);
 			path = MenuFirebase;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48E5A80E283BCD3000251601 /* LaunchScreen.storyboard in Resources */,
+				48E1F0482845139F00FC57CC /* TableViewCell.xib in Resources */,
 				4800F24D283E796C00A1D741 /* GoogleService-Info.plist in Resources */,
 				48E5A80B283BCD3000251601 /* Assets.xcassets in Resources */,
 				48E5A806283BCD2600251601 /* Main.storyboard in Resources */,
@@ -229,11 +242,14 @@
 			files = (
 				480D8E2C283D211600FCFE6D /* HomeViewController.swift in Sources */,
 				48E5730F28411CFE00D9E57F /* PrincipalViewController.swift in Sources */,
+				48E1F04328450C3300FC57CC /* CriptoManager.swift in Sources */,
 				480D8E2F283D212A00FCFE6D /* RegistroViewController.swift in Sources */,
 				48E5731228411D7600D9E57F /* DetalleViewController.swift in Sources */,
+				48E1F04028450BE800FC57CC /* CriptoDatos.swift in Sources */,
 				48E5A803283BCD2600251601 /* ViewController.swift in Sources */,
 				48E5A7FF283BCD2600251601 /* AppDelegate.swift in Sources */,
 				48E34763283FCA9F0012419C /* MapaViewController.swift in Sources */,
+				48E1F0472845139E00FC57CC /* TableViewCell.swift in Sources */,
 				48E5A801283BCD2600251601 /* SceneDelegate.swift in Sources */,
 				48E5A809283BCD2600251601 /* MenuFirebase.xcdatamodeld in Sources */,
 			);
