@@ -51,9 +51,9 @@ extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource{
         let celda = TablaCripto.dequeueReusableCell(withIdentifier: "celda", for: indexPath) as! TableViewCell
         //2 castear la celda
         
-        celda.NombreCrip.text = "Nombre: \(listaCripto[indexPath.row].name)"
+        celda.NombreCrip.text = "Nombre: \(listaCripto[indexPath.row].name!)"
         celda.RankCripto.text = "# \(listaCripto[indexPath.row].rank)"
-        celda.valorCripto.text = "$ \(listaCripto[indexPath.row].price)"
+        celda.valorCripto.text = "$ \(listaCripto[indexPath.row].price!)"
         
         
         //mostarr imageb
