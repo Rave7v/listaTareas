@@ -1,7 +1,10 @@
-
 import UIKit
+import CoreData
+import FirebaseAuth
 
 class DetalleViewController: UIViewController {
+    
+    let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var recibirObj: CriptoDatos?
     @IBOutlet weak var cripCurrency: UILabel!
@@ -15,7 +18,8 @@ class DetalleViewController: UIViewController {
         super.viewDidLoad()
         cripCurrency.text = recibirObj?.currency
         cripName.text = recibirObj?.name
-        cripPrice.text = "$\(recibirObj?.price! ?? "$0.0")"
+        
+        cripPrice.text = String(format: "$ %.2f",Float( (recibirObj?.price)!) ?? 0.0)
         cripStatus.text = "Estado: \(recibirObj?.status ?? "Coahuila")"
         cripRank.text = "#\(recibirObj?.rank ?? "0")"
         //obtener la imagen
@@ -30,5 +34,22 @@ class DetalleViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func guardar(){
+        do{
+            try contexto.save()
+        }catch{
+            print("error al guardar: \(error.localizedDescription)")
+        }
+    }
+    
+    @IBAction func AgregarBtn(_ sender: UIButton) {
+        let nuevoBit = Bits(context: self.contexto)
+        nuevoBit.bitName = recibirObj?.name
+        nuevoBit.bitValue = String(format: "$ %.2f",Float( (recibirObj?.price)!) ?? 0.0)
+        nuevoBit.usuario = Auth.auth().currentUser?.email
+        //agregar nuevo bit
+        self.guardar()
     }
 }

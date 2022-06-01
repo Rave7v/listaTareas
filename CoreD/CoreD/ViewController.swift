@@ -65,6 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func agregarTarea(_ sender: UIBarButtonItem) {
         var titulo = UITextField()
         let alerta = UIAlertController(title: "agregar", message: "Tarea", preferredStyle: .alert)
+        
         let accionAceptar = UIAlertAction(title: "aceptar", style: .default) { _ in
             //crear una nueva tarea
             let nuevaTarea = Tarea(context: self.contexto)

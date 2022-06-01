@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //velocidad
-        mensajeBienvenida.charInterval = 0.09
+        mensajeBienvenida.charInterval = 0.05
         //mensaje
         mensajeBienvenida.text = "Bienvenidos al Criptomundo "
         //color al finalizar

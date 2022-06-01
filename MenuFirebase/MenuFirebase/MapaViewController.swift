@@ -17,7 +17,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate {
         manager.delegate = self
         mapa.delegate = self
         
-        mapa.mapType = .satellite
+        //mapa.mapType = .satellite
         
         //manager
         manager.requestWhenInUseAuthorization()
@@ -26,6 +26,15 @@ class MapaViewController: UIViewController, MKMapViewDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         //monitorear en todo momento
         manager.startUpdatingLocation()
+        
+        
+        //hacer zoom en mi ubicacion
+        let localizacion = CLLocationCoordinate2D(latitude: latitud ?? 0, longitude: longitud ?? 0)
+        let spanMapa = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.04)
+        let region = MKCoordinateRegion(center: localizacion, span: spanMapa)
+        
+        mapa.setRegion(region, animated: true)
+        mapa.showsUserLocation = true
         
         //dirige a silicon valley
         let geocoder = CLGeocoder()
@@ -92,17 +101,16 @@ class MapaViewController: UIViewController, MKMapViewDelegate {
                 self.mapa.addOverlay(ruta.polyline)
                 self.mapa.setVisibleMapRect((ruta.polyline.boundingMapRect), animated: true)
             }
-        }
-    }
-    
+        }//fin de calculate
+    }//fin de trazar ruta
+}//fin de view did load
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderizado = MKPolylineRenderer(overlay: overlay as! MKPolyline)
         renderizado.strokeColor = .cyan
         return renderizado
     }
-}
     
-}
+}//fin de mapa view controller
 extension MapaViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("numero de ubicaciones \(locations.count)")

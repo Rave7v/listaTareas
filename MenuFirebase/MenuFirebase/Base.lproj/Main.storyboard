@@ -265,44 +265,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="uui-E6-vco">
-                                <rect key="frame" x="10" y="98" width="394" height="464"/>
+                                <rect key="frame" x="10" y="98" width="394" height="514"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g10-Cp-gVE">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g10-Cp-gVE">
+                                        <rect key="frame" x="0.0" y="0.5" width="394" height="149"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="7RT-dN-wCQ"/>
+                                            <constraint firstAttribute="width" constant="100" id="9qV-4K-Jy3"/>
+                                        </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cpZ-z4-rBa">
-                                        <rect key="frame" x="0.0" y="189" width="394" height="275"/>
+                                        <rect key="frame" x="0.0" y="211" width="394" height="303"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il8-Og-YZb">
-                                                <rect key="frame" x="158" y="0.0" width="78.5" height="35"/>
+                                                <rect key="frame" x="158" y="0.0" width="78.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrapped bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlI-SM-sgl">
-                                                <rect key="frame" x="137.5" y="60" width="119.5" height="35"/>
+                                                <rect key="frame" x="137.5" y="54.5" width="119.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200,25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-T2-LJk">
-                                                <rect key="frame" x="165" y="120" width="64.5" height="35"/>
+                                                <rect key="frame" x="165" y="109.5" width="64.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bls-s7-iKo">
-                                                <rect key="frame" x="173.5" y="180" width="47.5" height="35"/>
+                                                <rect key="frame" x="173.5" y="164" width="47.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-aF-Doi">
-                                                <rect key="frame" x="183" y="240" width="28" height="35"/>
+                                                <rect key="frame" x="183" y="218.5" width="28" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1Y-I9-2Ze">
+                                                <rect key="frame" x="135" y="273.5" width="124" height="29.5"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="zPS-ME-5mb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Agregar a mis bits">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="AgregarBtn:" destination="4Hd-kM-1ko" eventType="touchUpInside" id="n2h-LD-aJC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -311,10 +334,10 @@
                         <viewLayoutGuide key="safeArea" id="RY1-ig-Jii"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RY1-ig-Jii" firstAttribute="bottom" secondItem="uui-E6-vco" secondAttribute="bottom" constant="300" id="7xQ-Gb-Lq8"/>
-                            <constraint firstItem="uui-E6-vco" firstAttribute="top" secondItem="RY1-ig-Jii" secondAttribute="top" constant="10" id="bsQ-Tw-SUM"/>
-                            <constraint firstItem="uui-E6-vco" firstAttribute="leading" secondItem="RY1-ig-Jii" secondAttribute="leading" constant="10" id="k5M-HR-ym5"/>
-                            <constraint firstItem="RY1-ig-Jii" firstAttribute="trailing" secondItem="uui-E6-vco" secondAttribute="trailing" constant="10" id="oi4-Kr-Ny0"/>
+                            <constraint firstItem="RY1-ig-Jii" firstAttribute="bottom" secondItem="uui-E6-vco" secondAttribute="bottom" constant="250" id="DZB-ba-PIi"/>
+                            <constraint firstItem="uui-E6-vco" firstAttribute="top" secondItem="RY1-ig-Jii" secondAttribute="top" constant="10" id="WsY-AC-zpL"/>
+                            <constraint firstItem="RY1-ig-Jii" firstAttribute="trailing" secondItem="uui-E6-vco" secondAttribute="trailing" constant="10" id="Xty-ZW-0LW"/>
+                            <constraint firstItem="uui-E6-vco" firstAttribute="leading" secondItem="RY1-ig-Jii" secondAttribute="leading" constant="10" id="llA-gX-FXb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bit" id="Omb-FJ-dfe"/>
@@ -460,17 +483,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aCE-fc-xDu">
-                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <rect key="frame" x="5" y="93" width="404" height="715"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xUF-x7-Qwi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xUF-x7-Qwi" firstAttribute="trailing" secondItem="aCE-fc-xDu" secondAttribute="trailing" constant="10" id="9CE-ae-8nw"/>
-                            <constraint firstItem="aCE-fc-xDu" firstAttribute="top" secondItem="xUF-x7-Qwi" secondAttribute="top" constant="10" id="RD9-qG-cgb"/>
-                            <constraint firstItem="xUF-x7-Qwi" firstAttribute="bottom" secondItem="aCE-fc-xDu" secondAttribute="bottom" constant="10" id="Rwg-rj-vAm"/>
-                            <constraint firstItem="aCE-fc-xDu" firstAttribute="leading" secondItem="xUF-x7-Qwi" secondAttribute="leading" constant="10" id="YdN-cw-m2d"/>
-                            <constraint firstItem="aCE-fc-xDu" firstAttribute="top" secondItem="xUF-x7-Qwi" secondAttribute="top" constant="10" id="nME-Qd-PVY"/>
+                            <constraint firstItem="xUF-x7-Qwi" firstAttribute="trailing" secondItem="aCE-fc-xDu" secondAttribute="trailing" constant="5" id="9CE-ae-8nw"/>
+                            <constraint firstItem="aCE-fc-xDu" firstAttribute="top" secondItem="xUF-x7-Qwi" secondAttribute="top" constant="5" id="RD9-qG-cgb"/>
+                            <constraint firstItem="xUF-x7-Qwi" firstAttribute="bottom" secondItem="aCE-fc-xDu" secondAttribute="bottom" constant="5" id="Rwg-rj-vAm"/>
+                            <constraint firstItem="aCE-fc-xDu" firstAttribute="leading" secondItem="xUF-x7-Qwi" secondAttribute="leading" constant="5" id="YdN-cw-m2d"/>
+                            <constraint firstItem="aCE-fc-xDu" firstAttribute="top" secondItem="xUF-x7-Qwi" secondAttribute="top" constant="5" id="nME-Qd-PVY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ubicanos" image="map" catalog="system" id="TA3-3D-CLw"/>
@@ -487,9 +510,10 @@
         <designable name="QcO-Uh-qoj"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="UCf-Wv-H4F"/>
+        <segue reference="WNG-t2-aGj"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="bitcoinsign.square" catalog="system" width="128" height="114"/>
         <image name="d" width="800" height="1422"/>
         <image name="map" catalog="system" width="128" height="110"/>
@@ -511,6 +535,9 @@
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

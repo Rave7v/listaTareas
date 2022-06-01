@@ -53,7 +53,7 @@ extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource{
         
         celda.NombreCrip.text = "Nombre: \(listaCripto[indexPath.row].name!)"
         celda.RankCripto.text = "# \(listaCripto[indexPath.row].rank)"
-        celda.valorCripto.text = "$ \(listaCripto[indexPath.row].price!)"
+        celda.valorCripto.text = String(format: "$ %.2f",Float( (listaCripto[indexPath.row].price)!) ?? 0.0)
         
         
         //mostarr imageb
@@ -87,6 +87,5 @@ extension PrincipalViewController: UITableViewDelegate, UITableViewDataSource{
             objetoDestino.recibirObj = seleccion
         }
     }
-    
 }
 

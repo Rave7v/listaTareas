@@ -1,9 +1,12 @@
 
 import UIKit
 import FirebaseAuth
+import CoreData
 
 class HomeViewController: UIViewController {
-
+    let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var bitasos = [Bits]()
+    
     @IBOutlet weak var nomUsuario: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +20,16 @@ class HomeViewController: UIViewController {
             title = email
             print("Se guardó la sesion")
             defaults.synchronize()
+        }
+    }
+    
+    func leer() {
+        let solicitud : NSFetchRequest<Bits> = Bits.fetchRequest()
+        do{
+            //tratar de asignar al arreglo lo que arroje la solicitud
+            bitasos = try contexto.fetch(solicitud)
+        }catch{
+            print("Error al leer datos \(error.localizedDescription)")
         }
     }
     
