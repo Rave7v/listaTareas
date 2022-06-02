@@ -2,17 +2,39 @@
 import UIKit
 import FirebaseAuth
 import CoreData
+//alaerta
+//regrese a tabala
 
 class HomeViewController: UIViewController {
     let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var bitasos = [Bits]()
     
+    @IBOutlet weak var nombreBit: UILabel!
+    @IBOutlet weak var valorBit: UILabel!
     @IBOutlet weak var nomUsuario: UILabel!
+    @IBOutlet weak var imagenPerfil: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         //ocultar boton de retroceder
         navigationItem.hidesBackButton = true
-        
+        leer()
+        let bit = bitasos.last
+        nombreBit.text = bit?.nameBit
+        valorBit.text = bit?.valueBit
+        //sesion
+        if let email = Auth.auth().currentUser?.email {
+            let defaults = UserDefaults.standard
+            defaults.set(email, forKey: "email")
+            title = email
+            print("Se guardó la sesion")
+            defaults.synchronize()
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        leer()
+        let bit = bitasos.last
+        nombreBit.text = bit?.nameBit
+        valorBit.text = bit?.valueBit
         //sesion
         if let email = Auth.auth().currentUser?.email {
             let defaults = UserDefaults.standard
@@ -34,7 +56,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func cerrarSesionBtn(_ sender: UIButton) {
-        
         //borar sesion
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "email")

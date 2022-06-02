@@ -39,16 +39,17 @@ class DetalleViewController: UIViewController {
     func guardar(){
         do{
             try contexto.save()
+            print("guardado con exito")
         }catch{
             print("error al guardar: \(error.localizedDescription)")
         }
     }
-    
+     
     @IBAction func AgregarBtn(_ sender: UIButton) {
         let nuevoBit = Bits(context: self.contexto)
-        nuevoBit.bitName = recibirObj?.name
-        nuevoBit.bitValue = String(format: "$ %.2f",Float( (recibirObj?.price)!) ?? 0.0)
-        nuevoBit.usuario = Auth.auth().currentUser?.email
+        nuevoBit.nameBit = recibirObj?.name
+        nuevoBit.valueBit = String(format: "$ %.2f",Float( (recibirObj?.price)!) ?? 0.0)
+        nuevoBit.user = Auth.auth().currentUser?.email
         //agregar nuevo bit
         self.guardar()
     }

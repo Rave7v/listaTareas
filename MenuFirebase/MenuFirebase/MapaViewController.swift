@@ -13,12 +13,9 @@ class MapaViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapa: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         manager.delegate = self
         mapa.delegate = self
-        
         //mapa.mapType = .satellite
-        
         //manager
         manager.requestWhenInUseAuthorization()
         manager.requestLocation()
@@ -26,8 +23,9 @@ class MapaViewController: UIViewController, MKMapViewDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         //monitorear en todo momento
         manager.startUpdatingLocation()
-        
-        
+    }//fin de view did load
+    
+    override func viewWillAppear(_ animated: Bool) {
         //hacer zoom en mi ubicacion
         let localizacion = CLLocationCoordinate2D(latitude: latitud ?? 0, longitude: longitud ?? 0)
         let spanMapa = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.04)
@@ -39,29 +37,28 @@ class MapaViewController: UIViewController, MKMapViewDelegate {
         //dirige a silicon valley
         let geocoder = CLGeocoder()
         let direccion = "Silicon Valley"
-        geocoder.geocodeAddressString(direccion) { (places: [CLPlacemark]?,error: Error?) in
+        geocoder.geocodeAddressString(direccion) { [self] (places: [CLPlacemark]?,error: Error?) in
         //crear destino
         guard let destinoRuta = places?.first?.location else{return}
-                if error == nil{
-                    let lugar = places?.first
-                    let anotacion = MKPointAnnotation()
-                    anotacion.coordinate = (lugar?.location?.coordinate)!
-                    anotacion.title = direccion
+        if error == nil{
+            let lugar = places?.first
+            let anotacion = MKPointAnnotation()
+            anotacion.coordinate = (lugar?.location?.coordinate)!
+            anotacion.title = direccion
                     
-                    //span o nivel de zoom
-                    let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-                    let region = MKCoordinateRegion(center: anotacion.coordinate, span: span)
+            //span o nivel de zoom
+            let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+            let region = MKCoordinateRegion(center: anotacion.coordinate, span: span)
                     
-                    //
-                    self.mapa.setRegion(region, animated: true)
-                    self.mapa.addAnnotation(anotacion)
-                    
-                    trazarRuta(coordenadasDestino: destinoRuta.coordinate)
-                }//if error
-                else{
-                    print("Error al encontrar direccion o lugar!")
-                }
-            }//closure
+            self.mapa.setRegion(region, animated: true)
+            self.mapa.addAnnotation(anotacion)
+            self.trazarRuta(coordenadasDestino: destinoRuta.coordinate)
+            }//if error
+            else{
+                print("Error al encontrar direccion o lugar!")
+            }
+        }//closure
+    }
     
     func trazarRuta(coordenadasDestino: CLLocationCoordinate2D) {
         guard let coordOrigen = manager.location?.coordinate else { return }
@@ -103,7 +100,6 @@ class MapaViewController: UIViewController, MKMapViewDelegate {
             }
         }//fin de calculate
     }//fin de trazar ruta
-}//fin de view did load
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderizado = MKPolylineRenderer(overlay: overlay as! MKPolyline)
         renderizado.strokeColor = .cyan
@@ -129,4 +125,3 @@ extension MapaViewController: CLLocationManagerDelegate{
         present(alerta, animated: true)
     }
 }
-

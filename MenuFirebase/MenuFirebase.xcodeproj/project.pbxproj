@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4800F24D283E796C00A1D741 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4800F24C283E796C00A1D741 /* GoogleService-Info.plist */; };
+		4807E1212848FDA300C3851E /* Coins.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4807E11F2848FDA300C3851E /* Coins.xcdatamodeld */; };
 		480D8E2C283D211600FCFE6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D8E2B283D211600FCFE6D /* HomeViewController.swift */; };
 		480D8E2F283D212A00FCFE6D /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */; };
 		48E1F04028450BE800FC57CC /* CriptoDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E1F03F28450BE800FC57CC /* CriptoDatos.swift */; };
@@ -21,7 +22,6 @@
 		48E5A801283BCD2600251601 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5A800283BCD2600251601 /* SceneDelegate.swift */; };
 		48E5A803283BCD2600251601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5A802283BCD2600251601 /* ViewController.swift */; };
 		48E5A806283BCD2600251601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E5A804283BCD2600251601 /* Main.storyboard */; };
-		48E5A809283BCD2600251601 /* MenuFirebase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48E5A807283BCD2600251601 /* MenuFirebase.xcdatamodeld */; };
 		48E5A80B283BCD3000251601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E5A80A283BCD3000251601 /* Assets.xcassets */; };
 		48E5A80E283BCD3000251601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E5A80C283BCD3000251601 /* LaunchScreen.storyboard */; };
 		9ED259B73D1FAC6EF3630AAC /* Pods_MenuFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C9527DC2ACA11CC610BA3 /* Pods_MenuFirebase.framework */; };
@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		4800F24C283E796C00A1D741 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4807E1202848FDA300C3851E /* Coins.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coins.xcdatamodel; sourceTree = "<group>"; };
 		480D8E2B283D211600FCFE6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		48E1F03F28450BE800FC57CC /* CriptoDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoDatos.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		48E5A800283BCD2600251601 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		48E5A802283BCD2600251601 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48E5A805283BCD2600251601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		48E5A808283BCD2600251601 /* MenuFirebase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MenuFirebase.xcdatamodel; sourceTree = "<group>"; };
 		48E5A80A283BCD3000251601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48E5A80D283BCD3000251601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48E5A80F283BCD3000251601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +93,6 @@
 				48E5A80C283BCD3000251601 /* LaunchScreen.storyboard */,
 				48E5A80F283BCD3000251601 /* Info.plist */,
 				4800F24C283E796C00A1D741 /* GoogleService-Info.plist */,
-				48E5A807283BCD2600251601 /* MenuFirebase.xcdatamodeld */,
 				480D8E2B283D211600FCFE6D /* HomeViewController.swift */,
 				480D8E2E283D212A00FCFE6D /* RegistroViewController.swift */,
 				48E34762283FCA9F0012419C /* MapaViewController.swift */,
@@ -103,6 +102,7 @@
 				48E1F04228450C3300FC57CC /* CriptoManager.swift */,
 				48E1F0452845139E00FC57CC /* TableViewCell.swift */,
 				48E1F0462845139E00FC57CC /* TableViewCell.xib */,
+				4807E11F2848FDA300C3851E /* Coins.xcdatamodeld */,
 			);
 			path = MenuFirebase;
 			sourceTree = "<group>";
@@ -241,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				480D8E2C283D211600FCFE6D /* HomeViewController.swift in Sources */,
+				4807E1212848FDA300C3851E /* Coins.xcdatamodeld in Sources */,
 				48E5730F28411CFE00D9E57F /* PrincipalViewController.swift in Sources */,
 				48E1F04328450C3300FC57CC /* CriptoManager.swift in Sources */,
 				480D8E2F283D212A00FCFE6D /* RegistroViewController.swift in Sources */,
@@ -251,7 +252,6 @@
 				48E34763283FCA9F0012419C /* MapaViewController.swift in Sources */,
 				48E1F0472845139E00FC57CC /* TableViewCell.swift in Sources */,
 				48E5A801283BCD2600251601 /* SceneDelegate.swift in Sources */,
-				48E5A809283BCD2600251601 /* MenuFirebase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,13 +455,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		48E5A807283BCD2600251601 /* MenuFirebase.xcdatamodeld */ = {
+		4807E11F2848FDA300C3851E /* Coins.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				48E5A808283BCD2600251601 /* MenuFirebase.xcdatamodel */,
+				4807E1202848FDA300C3851E /* Coins.xcdatamodel */,
 			);
-			currentVersion = 48E5A808283BCD2600251601 /* MenuFirebase.xcdatamodel */;
-			path = MenuFirebase.xcdatamodeld;
+			currentVersion = 4807E1202848FDA300C3851E /* Coins.xcdatamodel */;
+			path = Coins.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
