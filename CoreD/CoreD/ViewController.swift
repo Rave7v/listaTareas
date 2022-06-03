@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return celda
     }
+    
+    //para la check mark
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if TablaTareas.cellForRow(at: indexPath)?.accessoryType == .checkmark{
             TablaTareas.cellForRow(at: indexPath)?.accessoryType = .none
@@ -40,6 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //deseleccionar celda
         TablaTareas.deselectRow(at: indexPath, animated: true)
     }
+    //para borrar
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let accionEliminar = UIContextualAction(style: .normal, title: "borrar") { _, _, _ in
             self.contexto.delete(self.listaTareas[indexPath.row])

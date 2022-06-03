@@ -16,6 +16,8 @@ class DetalleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         cripCurrency.text = recibirObj?.currency
         cripName.text = recibirObj?.name
         
@@ -40,9 +42,17 @@ class DetalleViewController: UIViewController {
         do{
             try contexto.save()
             print("guardado con exito")
+            let alerta = UIAlertController(title: "OK", message: "Se ha guardado con exito", preferredStyle: .alert)
+            let accionOk = UIAlertAction(title: "Aceptar", style: .default)
+            
+            alerta.addAction(accionOk)
+            self.present(alerta, animated: true)
+            navigationController?.popViewController(animated: true)
+            
         }catch{
             print("error al guardar: \(error.localizedDescription)")
         }
+        
     }
      
     @IBAction func AgregarBtn(_ sender: UIButton) {
@@ -52,5 +62,6 @@ class DetalleViewController: UIViewController {
         nuevoBit.user = Auth.auth().currentUser?.email
         //agregar nuevo bit
         self.guardar()
+        
     }
 }

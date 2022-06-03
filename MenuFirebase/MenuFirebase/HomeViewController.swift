@@ -1,16 +1,12 @@
-
 import UIKit
 import FirebaseAuth
 import CoreData
-//alaerta
-//regrese a tabala
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController{
     let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var bitasos = [Bits]()
     
-    @IBOutlet weak var nombreBit: UILabel!
-    @IBOutlet weak var valorBit: UILabel!
+    @IBOutlet weak var bitso: UILabel!
     @IBOutlet weak var nomUsuario: UILabel!
     @IBOutlet weak var imagenPerfil: UIImageView!
     override func viewDidLoad() {
@@ -18,10 +14,8 @@ class HomeViewController: UIViewController {
         //ocultar boton de retroceder
         navigationItem.hidesBackButton = true
         leer()
-        let bit = bitasos.last
-        nombreBit.text = bit?.nameBit
-        valorBit.text = bit?.valueBit
-        //sesion
+        let texto = bitasos.last
+        bitso.text = "El usuario \(texto?.user ?? "Anon") agrego \(texto?.nameBit ?? "Bit") a sus favoritos con un valor de: \(texto?.valueBit ?? "0,0")"
         if let email = Auth.auth().currentUser?.email {
             let defaults = UserDefaults.standard
             defaults.set(email, forKey: "email")
@@ -32,10 +26,10 @@ class HomeViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         leer()
-        let bit = bitasos.last
-        nombreBit.text = bit?.nameBit
-        valorBit.text = bit?.valueBit
         //sesion
+        let texto = bitasos.last
+        bitso.text = "El usuario \(texto?.user ?? "Anon") agrego \(texto?.nameBit ?? "Bit") a sus favoritos con un valor de: \(texto?.valueBit ?? "0,0")"
+        
         if let email = Auth.auth().currentUser?.email {
             let defaults = UserDefaults.standard
             defaults.set(email, forKey: "email")
