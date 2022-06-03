@@ -143,7 +143,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tqk-l9-bC2">
                                                 <rect key="frame" x="0.0" y="72.5" width="394" height="52.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -259,50 +259,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="uui-E6-vco">
-                                <rect key="frame" x="10" y="98" width="124" height="514"/>
+                                <rect key="frame" x="10" y="98" width="394" height="514"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g10-Cp-gVE">
-                                        <rect key="frame" x="0.0" y="0.5" width="124" height="149"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="394" height="149"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="7RT-dN-wCQ"/>
                                             <constraint firstAttribute="width" constant="100" id="9qV-4K-Jy3"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cpZ-z4-rBa">
-                                        <rect key="frame" x="0.0" y="211" width="124" height="303"/>
+                                        <rect key="frame" x="0.0" y="211" width="394" height="303"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il8-Og-YZb">
-                                                <rect key="frame" x="23" y="0.0" width="78.5" height="29.5"/>
+                                                <rect key="frame" x="158" y="0.0" width="78.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrapped bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlI-SM-sgl">
-                                                <rect key="frame" x="2.5" y="54.5" width="119.5" height="30"/>
+                                                <rect key="frame" x="137.5" y="54.5" width="119.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200,25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-T2-LJk">
-                                                <rect key="frame" x="30" y="109.5" width="64.5" height="29.5"/>
+                                                <rect key="frame" x="165" y="109.5" width="64.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bls-s7-iKo">
-                                                <rect key="frame" x="38.5" y="164" width="47.5" height="29.5"/>
+                                                <rect key="frame" x="173.5" y="164" width="47.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-aF-Doi">
-                                                <rect key="frame" x="48" y="218.5" width="28" height="30"/>
+                                                <rect key="frame" x="183" y="218.5" width="28" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1Y-I9-2Ze">
-                                                <rect key="frame" x="0.0" y="273.5" width="124" height="29.5"/>
+                                                <rect key="frame" x="135" y="273.5" width="124" height="29.5"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="zPS-ME-5mb"/>
@@ -518,7 +518,7 @@
         <designable name="QcO-Uh-qoj"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="UCf-Wv-H4F"/>
+        <segue reference="WNG-t2-aGj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
